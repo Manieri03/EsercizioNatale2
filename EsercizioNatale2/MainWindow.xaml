@@ -7,20 +7,28 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ComboBox Name="combooperazione" HorizontalAlignment="Left" Margin="475,110,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem>Addizione</ComboBoxItem>
-            <ComboBoxItem>Sottrazione</ComboBoxItem>
-            <ComboBoxItem>Moltiplicazione</ComboBoxItem>
-            <ComboBoxItem>Divisione</ComboBoxItem>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFECAB00" Offset="0"/>
+                <GradientStop Color="#FFFFE8AB" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <ComboBox x:Name="combooperazione" HorizontalAlignment="Left" Margin="475,110,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Addizione"/>
+            <ComboBoxItem Content="Sottrazione"/>
+            <ComboBoxItem Content="Moltiplicazione"/>
+            <ComboBoxItem Content="Divisione"/>
         </ComboBox>
-        <TextBox Name="txt1" HorizontalAlignment="Left" Height="30" Margin="190,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125"/>
-        <TextBox Name="txt2" HorizontalAlignment="Left" Height="30" Margin="190,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125"/>
+        <TextBox x:Name="txt1" HorizontalAlignment="Left" Height="30" Margin="190,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125"/>
+        <TextBox x:Name="txt2" HorizontalAlignment="Left" Height="30" Margin="190,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125"/>
         <Label Content="Primo numero:" HorizontalAlignment="Left" Height="25" Margin="75,110,0,0" VerticalAlignment="Top" Width="110"/>
         <Label Content="Secondo numero:" HorizontalAlignment="Left" Height="25" Margin="75,180,0,0" VerticalAlignment="Top" Width="105"/>
-        <TextBox Name="txtrisultato" IsReadOnly="True" HorizontalAlignment="Left" Height="25" Margin="285,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190"/>
+        <TextBox x:Name="txtrisultato" IsReadOnly="True" HorizontalAlignment="Left" Height="25" Margin="305,325,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190"/>
         <Button Content="Calcola" HorizontalAlignment="Left" Height="30" Margin="495,175,0,0" VerticalAlignment="Top" Width="80" Click="Button_Click"/>
-        <Label Content="Calcolatrice" HorizontalAlignment="Left" Height="35" Margin="310,30,0,0" VerticalAlignment="Top" Width="150" FontFamily="Swis721 BlkOul BT" FontSize="20"/>
+        <Label Content="Calcolatrice" HorizontalAlignment="Left" Height="35" Margin="325,30,0,0" VerticalAlignment="Top" Width="150" FontFamily="Swis721 BlkOul BT" FontSize="20"/>
         <Label Content="Operazione:" HorizontalAlignment="Left" Height="30" Margin="495,80,0,0" VerticalAlignment="Top" Width="115"/>
+        <Image Margin="355,80,362,263" Source="calcola.png" Stretch="Fill"/>
+        <Label Content="Risultato:" Height="35" Margin="370,285,317,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
